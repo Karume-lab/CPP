@@ -3,6 +3,7 @@
 student_t *newStudent(string name, int age, float marks)
 {
     student_t *ptr = (student_t*)malloc(sizeof(student_t));
+    
     if (ptr == NULL)
         return (NULL);
     
@@ -42,8 +43,40 @@ int insertEnd(student_t **head, string name, int age, float marks)
 }
 
 
+int insertSpecific(student_t **head, int index, string name, int age, float marks)
+{
+    student_t *ptr = *head;
+    int size = sizeStudent(&ptr);
+    int count = 0;
 
-int printNode(student_t **head)
+    if (index > size || index < 0)
+    {
+        printf("Index out of range\n");
+        return (1);
+    }
+    else if (index == 0)
+    {
+        insertBeginning(head, name, age, marks);
+        return (0);
+    }
+    else
+    {
+        while (count >= index-1)
+        {
+            ptr = ptr->next;
+            count++;
+        }
+        student_t *newNode = newStudent(name, age, marks);
+        newNode->next = ptr->next;
+        ptr->next = newNode;
+    }
+
+    return (0);
+}
+
+
+
+int printStudent(student_t **head)
 {
     student_t *ptr = *head;
     int count = 1;
@@ -62,7 +95,26 @@ int printNode(student_t **head)
         }   
     }
     else
-        printf("The list is empty. ");
+        printf("The list is empty. \n");
 
     return (0);
+}
+
+
+int sizeStudent(student_t **head)
+{
+    student_t *ptr = *head;
+    int count = 0;
+    if (ptr != NULL)
+    {
+        while (ptr)
+        {
+            count++;
+            ptr = ptr->next;
+        }   
+    }
+    else
+        count = 0;
+
+    return (count);
 }
