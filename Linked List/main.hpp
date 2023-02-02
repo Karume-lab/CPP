@@ -16,3 +16,4 @@ int insertEnd(student_t **head, string name, int age, float marks);
 int insertSpecific(student_t **head, int index, string name, int age, float marks);
 int printStudent(student_t **head);
 int sizeStudent(student_t **head);
+int deleteFirst(student_t **head);
