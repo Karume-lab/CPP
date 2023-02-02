@@ -47,7 +47,6 @@ int insertSpecific(student_t **head, int index, string name, int age, float mark
 {
     student_t *ptr = *head;
     int size = sizeStudent(&ptr);
-    int count = 0;
 
     if (index > size || index < 0)
     {
@@ -61,11 +60,11 @@ int insertSpecific(student_t **head, int index, string name, int age, float mark
     }
     else
     {
-        while (count >= index-1)
+        for (int i = 1; i < index-1; i++)
         {
             ptr = ptr->next;
-            count++;
         }
+
         student_t *newNode = newStudent(name, age, marks);
         newNode->next = ptr->next;
         ptr->next = newNode;
