@@ -19,3 +19,4 @@ student_t *reverseNodes(student_t **head)
     }
     (*head) = prev;
     return (*head);    
+}
