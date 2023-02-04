@@ -21,4 +21,3 @@ student_t *findLoop(student_t **head)
     }
     printf("No loop\n");
     return (NULL);
-}
