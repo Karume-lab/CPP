@@ -22,4 +22,3 @@ int printData(student_t **head)
         printf("The list is empty. \n");
 
     return (0);
-}
