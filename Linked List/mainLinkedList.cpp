@@ -25,5 +25,5 @@ int main(void)
     // reverseNodes(&head);
     // cout<< "\n\nChange\n\n";
     // printData(&head);
-    return (0)
+    return (0);
 }
