@@ -12,14 +12,18 @@ int main(void)
     // insertEnd(&head, "1.Mary", 25, 70);
     // insertSpecific(&head, 0, "6.New", 30, 40);
     
-    student_t *first = newNode("Karume",21 ,20);
+    student_t *first = newNode("Karume",1 ,20);
     student_t *head = first;
-    student_t *second = newNode("Dan",50 ,20);
+    student_t *second = newNode("Dan",2 ,20);
     first->next = second;
-    student_t *third = newNode("John",20 ,20);
+    student_t *third = newNode("John",3 ,20);
     second->next = third;
+    student_t *fourth = newNode("Dave", 4, 57);
+    third->next = fourth;
 
-    third->next = first;
+    fourth->next = second;
+
+    // findLoop(&head);
     removeLoop(&head);
     printData(&head);
     // reverseNodes(&head);
