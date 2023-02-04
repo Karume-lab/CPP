@@ -13,4 +13,3 @@ student_t *newNode(string name, int age, float marks)
     ptr->next = NULL;
 
     return (ptr);
-}
