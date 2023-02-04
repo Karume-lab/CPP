@@ -16,3 +16,4 @@ int insertEnd(student_t **head, string name, int age, float marks)
     newNode->next = NULL;
 
     return (0);
+}
