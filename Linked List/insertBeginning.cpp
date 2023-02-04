@@ -7,3 +7,4 @@ int insertBeginning(student_t **head, string name, int age, float marks)
     ptr->next = *head;
     *head = ptr;
     return (0);
+}
