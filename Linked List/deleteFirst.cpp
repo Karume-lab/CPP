@@ -13,4 +13,3 @@ int deleteFirst(student_t **head)
 
     free(ptr);
     return (0);
-}
