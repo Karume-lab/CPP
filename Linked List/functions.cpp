@@ -84,7 +84,7 @@ int printStudent(student_t **head)
         while (ptr)
         {
             printf("\n");
-            // cout<< "Node Number: " << count << endl;
+            cout<< "Node Number: " << count << endl;
             cout << "Name: " << ptr->name << endl;
             cout << "Age: " << ptr->age << endl;
             cout << "Marks: " << ptr->marks << endl;
