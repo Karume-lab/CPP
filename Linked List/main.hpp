@@ -19,4 +19,4 @@ int sizeNodes(student_t **head);
 int deleteFirst(student_t **head);
 student_t *reverseNodes(student_t **head);
 student_t *findLoop(student_t **head);
-int removeLoop(student_t **head)
+int removeLoop(student_t **head);
