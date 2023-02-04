@@ -13,4 +13,3 @@ int removeLoop(student_t **head)
     fastPtr->next = NULL;
     
     return (0);
-}
