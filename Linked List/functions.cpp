@@ -84,7 +84,7 @@ int printStudent(student_t **head)
         while (ptr)
         {
             printf("\n");
-            cout<< "Node Number: " << count << endl;
+            // cout<< "Node Number: " << count << endl;
             cout << "Name: " << ptr->name << endl;
             cout << "Age: " << ptr->age << endl;
             cout << "Marks: " << ptr->marks << endl;
@@ -131,4 +131,26 @@ int deleteFirst(student_t **head)
 
     free(ptr);
     return (0);
+}
+
+
+student_t *reverseStudent(student_t **head)
+{
+    student_t *prev = NULL;
+    student_t *next;
+
+    if (head == NULL || *head == NULL)
+        return (NULL); 
+    if ((*head)->next == NULL)
+        return (*head);
+    
+    while ((*head) != NULL)
+    {
+        next = (*head)->next;
+        (*head)->next = prev;
+        prev = (*head);
+        (*head) = next;
+    }
+    (*head) = prev;
+    return (*head);    
 }

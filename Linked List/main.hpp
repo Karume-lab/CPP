@@ -17,3 +17,4 @@ int insertSpecific(student_t **head, int index, string name, int age, float mark
 int printStudent(student_t **head);
 int sizeStudent(student_t **head);
 int deleteFirst(student_t **head);
+student_t *reverseStudent(student_t **head);
