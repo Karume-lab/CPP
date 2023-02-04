@@ -10,11 +10,13 @@ typedef struct Student{
     struct Student *next;
 }student_t;
 
-student_t *newStudent(string name, int age, float marks);
+student_t *newNode(string name, int age, float marks);
 int insertBeginning(student_t **head, string name, int age, float marks);
 int insertEnd(student_t **head, string name, int age, float marks);
-int insertSpecific(student_t **head, int index, string name, int age, float marks);
-int printStudent(student_t **head);
-int sizeStudent(student_t **head);
+int insertIndex(student_t **head, int index, string name, int age, float marks);
+int printData(student_t **head);
+int sizeNodes(student_t **head);
 int deleteFirst(student_t **head);
-student_t *reverseStudent(student_t **head);
+student_t *reverseNodes(student_t **head);
+student_t *findLoop(student_t **head);
+int removeLoop(student_t **head);
