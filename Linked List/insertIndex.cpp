@@ -28,4 +28,3 @@ int insertIndex(student_t **head, int index, string name, int age, float marks)
     }
 
     return (0);
-}
