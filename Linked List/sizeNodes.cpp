@@ -16,4 +16,3 @@ int sizeNodes(student_t **head)
         count = 0;
 
     return (count);
-}
